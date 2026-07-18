@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Field Notes — a small journal</title>
+<meta name="description" content="Field Notes is a small journal of short, honest entries about noticing things.">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav wrap" aria-label="Primary">
+    <a href="index.html" class="brand">
+      <svg class="brand-mark" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="17" cy="17" r="16" stroke="#2F4B3C" stroke-width="1.4"/>
+        <path d="M10 22c1-6.5 5.5-11 12-11-1.2 6.6-5.6 10.8-12 11Z" fill="#2F4B3C"/>
+        <path d="M10 22c3-1 5.6-3.2 7-6" stroke="#FAF7F0" stroke-width="1" stroke-linecap="round"/>
+      </svg>
+      <span class="brand-text">Field <em>Notes</em></span>
+    </a>
+
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span>
+    </button>
+
+    <ul class="nav-links">
+      <li><a href="index.html" class="is-active">Home</a></li>
+      <li><a href="index.html#entries">Entries</a></li>
+      <li><a href="add-blog.html" class="nav-cta">Add Blog</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow">Est. 2026 · Updated weekly</span>
+        <h1>Short, honest entries<br>about <em>noticing</em> things.</h1>
+        <p class="hero-sub">Field Notes is a small, shared journal — no bylines to chase, no algorithm to please. Just people writing down what they saw before it slips away.</p>
+        <a href="add-blog.html" class="btn" style="display:inline-block; text-decoration:none;">Write an entry →</a>
+      </div>
+      <div class="hero-aside">
+        <span class="label">Entries logged</span>
+        <div class="hero-stat" id="entry-count">0</div>
+        <div class="hero-stat-label">and counting</div>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <div class="section-head" id="entries">
+      <h2>Latest entries</h2>
+      <div class="filter-row" role="group" aria-label="Filter by category">
+        <button class="chip is-active" data-filter="all">All</button>
+        <button class="chip" data-filter="Nature">Nature</button>
+        <button class="chip" data-filter="Craft">Craft</button>
+        <button class="chip" data-filter="Reading">Reading</button>
+        <button class="chip" data-filter="General">General</button>
+      </div>
+    </div>
+
+    <div class="entries" id="entries-list" role="list">
+      <!-- rendered by app.js -->
+    </div>
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div class="footer-brand">
+      <span class="brand-text">Field <em>Notes</em></span>
+      <p class="footer-tag">A small journal for entries too short for a newsletter and too true to forget.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Explore</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#entries">Entries</a></li>
+        <li><a href="add-blog.html">Add Blog</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Categories</h4>
+      <ul>
+        <li><a href="index.html#entries">Nature</a></li>
+        <li><a href="index.html#entries">Craft</a></li>
+        <li><a href="index.html#entries">Reading</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap footer-bottom">
+    <span>© <span data-year></span> Field Notes. Written, not generated.</span>
+    <span>Entries stored locally in your browser.</span>
+  </div>
+</footer>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="app.js"></script>
+</body>
+</html>
